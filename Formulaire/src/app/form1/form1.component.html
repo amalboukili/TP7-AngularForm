@@ -1,0 +1,15 @@
+<form [formGroup]="myForm" (ngSubmit)="enregistrer(myForm)">
+  <pre>
+
+    <label>Name   : </label> <input type="text" name="nom" formControlName="nom">
+
+    <label> Votre Age   : </label> <input type="text" name="age" formControlName="age">
+
+    <label> Ville   : </label> <input type="text" name="ville" formControlName="ville">
+
+    <button type="submit"> Enregistrer </button>
+    <button type="button" (click)="afficherForm()">Afficher dans l'alerte</button>
+  
+  </pre>
+  <pre> {{myForm.value | json}} </pre>
+</form>
